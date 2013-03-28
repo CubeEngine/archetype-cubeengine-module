@@ -33,9 +33,9 @@
     </distributionManagement>
 
     <scm>
-        <url>scm:git:https://github.com/CubeIslandDev/archetype-cubeengine-module</url>
-        <connection>scm:git:https://github.com/CubeIslandDev/archetype-cubeengine-module</connection>
-        <developerConnection>scm:git:https://github.com/CubeIslandDev/archetype-cubeengine-module</developerConnection>
+        <url>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</url>
+        <connection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</connection>
+        <developerConnection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</developerConnection>
     </scm>
     
     <build>
