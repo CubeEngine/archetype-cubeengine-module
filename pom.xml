@@ -33,9 +33,9 @@
     </distributionManagement>
 
     <scm>
-        <url>scm:git:https://github.com/CubeIsland/AntiGuest</url>
-        <connection>scm:git:git://github.com/CubeIsland/AntiGuest.git</connection>
-        <developerConnection>scm:git:git@github.com:CubeIsland/AntiGuest.git</developerConnection>
+        <url>scm:git:https://github.com/CubeIslandDev/archetype-cubeengine-module</url>
+        <connection>scm:git:https://github.com/CubeIslandDev/archetype-cubeengine-module</connection>
+        <developerConnection>scm:git:https://github.com/CubeIslandDev/archetype-cubeengine-module</developerConnection>
     </scm>
     
     <build>
@@ -46,6 +46,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-archetype-plugin</artifactId>
                 <version>2.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3.2</version>
             </plugin>
         </plugins>
     </build>
