@@ -1,58 +1,58 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>de.cubeisland.maven.archetypes</groupId>
-    <artifactId>archetype-cubeengine-module</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.cubeisland.maven.archetypes</groupId>
+  <artifactId>archetype-cubeengine-module</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
 
-    <name>Archetype - CubeEngine::Module</name>
-    <description>This archetype generates a new module for the Cube Engine.</description>
-    <url>http://engine.cubeisland.de</url>
-    <inceptionYear>2013</inceptionYear>
+  <name>Archetype - CubeEngine::Module</name>
+  <description>This archetype generates a new module for the Cube Engine.</description>
+  <url>http://engine.cubeisland.de</url>
+  <inceptionYear>2013</inceptionYear>
 
-    <developers>
-        <developer>
-            <id>quickwango</id>
-            <name>Phillip Schichtel</name>
-            <roles>
-                <role>Developer</role>
-            </roles>
-        </developer>
-    </developers>
+  <developers>
+    <developer>
+      <id>quickwango</id>
+      <name>Phillip Schichtel</name>
+      <roles>
+        <role>Developer</role>
+      </roles>
+    </developer>
+  </developers>
 
-    <distributionManagement>
-        <repository>
-            <id>cubeisland-repo</id>
-            <name>Release</name>
-            <url>http://nexus.cubeisland.de/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>cubeisland-repo</id>
-            <name>Release</name>
-            <url>http://nexus.cubeisland.de/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+  <distributionManagement>
+    <repository>
+      <id>cubeisland-repo</id>
+      <name>Release</name>
+      <url>http://nexus.cubeisland.de/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>cubeisland-repo</id>
+      <name>Release</name>
+      <url>http://nexus.cubeisland.de/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
 
-    <scm>
-        <url>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</url>
-        <connection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</connection>
-        <developerConnection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</developerConnection>
-      <tag>HEAD</tag>
+  <scm>
+    <url>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</url>
+    <connection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</connection>
+    <developerConnection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</developerConnection>
+    <tag>HEAD</tag>
   </scm>
-    
-    <build>
-        <defaultGoal>clean install archetype:update-local-catalog</defaultGoal>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-archetype-plugin</artifactId>
-                <version>2.2</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
-            </plugin>
-        </plugins>
-    </build>
+  <build>
+    <defaultGoal>clean install archetype:update-local-catalog</defaultGoal>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-archetype-plugin</artifactId>
+        <version>2.2</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
+      </plugin>
+    </plugins>
+  </build>
 </project>
