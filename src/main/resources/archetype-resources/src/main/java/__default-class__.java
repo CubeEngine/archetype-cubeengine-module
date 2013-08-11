@@ -1,6 +1,6 @@
 package ${package};
 
-import de.cubeisland.cubeengine.core.module.Module;
+import de.cubeisland.engine.core.module.Module;
 
 public class ${default-class} extends Module
 {
