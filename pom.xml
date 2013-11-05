@@ -1,58 +1,135 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.cubeisland.maven.archetypes</groupId>
-  <artifactId>archetype-cubeengine-module</artifactId>
-  <version>1.0.2-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.cubeisland.maven.archetypes</groupId>
+    <artifactId>archetype-cubeengine-module</artifactId>
+    <version>1.0.2-SNAPSHOT</version>
 
-  <name>Archetype - CubeEngine::Module</name>
-  <description>This archetype generates a new module for the Cube Engine.</description>
-  <url>http://engine.cubeisland.de</url>
-  <inceptionYear>2013</inceptionYear>
+    <name>Archetype - CubeEngine::Module</name>
+    <description>This archetype generates a new module for the Cube Engine.</description>
+    <url>http://engine.cubeisland.de</url>
+    <inceptionYear>2013</inceptionYear>
 
-  <developers>
-    <developer>
-      <id>quickwango</id>
-      <name>Phillip Schichtel</name>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-  </developers>
+    <licenses>
+        <license>
+            <name>The MIT License (MIT)</name>
+            <url>LICENSE.txt</url>
+        </license>
+    </licenses>
 
-  <distributionManagement>
-    <repository>
-      <id>cubeisland-repo</id>
-      <name>Release</name>
-      <url>http://nexus.cubeisland.de/content/repositories/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>cubeisland-repo</id>
-      <name>Release</name>
-      <url>http://nexus.cubeisland.de/content/repositories/snapshots</url>
-    </snapshotRepository>
-  </distributionManagement>
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
 
-  <scm>
-    <url>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</url>
-    <connection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</connection>
-    <developerConnection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
+    <scm>
+        <url>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</url>
+        <connection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</connection>
+        <developerConnection>scm:git:https://github.com/CubeEngineDev/archetype-cubeengine-module</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
 
-  <build>
-    <defaultGoal>clean install archetype:update-local-catalog</defaultGoal>
+    <distributionManagement>
+        <repository>
+            <id>sonatype-nexus</id>
+            <name>Nexus Release Repository</name>
+            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>sonatype-nexus</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-archetype-plugin</artifactId>
-        <version>2.2</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>2.3.2</version>
-      </plugin>
-    </plugins>
-  </build>
+    <developers>
+        <developer>
+            <id>quickwango</id>
+            <name>Phillip Schichtel</name>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <build>
+        <defaultGoal>clean install archetype:update-local-catalog</defaultGoal>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.4</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
