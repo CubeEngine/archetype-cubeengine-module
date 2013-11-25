@@ -9,6 +9,6 @@ public class ${default-class} extends Module
     @Override
     public void onEnable()
     {
-        this.config = Configuration.load(${default-class}Config.class, this);
+        this.config = this.loadConfig(${default-class}Config.class);
     }
 }
