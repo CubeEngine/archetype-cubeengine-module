@@ -4,13 +4,13 @@
   <parent>
     <groupId>de.cubeisland.engine</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>${coreVersion}</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
   <artifactId>${artifactId}</artifactId>
   <name>${name}</name>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>${version}</version>
   <description>${description}</description>
 
   <dependencies>
