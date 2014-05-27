@@ -1,6 +1,7 @@
 package ${package};
 
-import de.cubeisland.engine.configuration.YamlConfiguration;
+import de.cubeisland.engine.reflect.ReflectedYaml;
 
-public class ${default-class}Config extends YamlConfiguration
+@SuppressWarnings("all")
+public class ${default-class}Config extends ReflectedYaml
 {}
