@@ -1,6 +1,6 @@
 package ${package};
 
-import de.cubeisland.engine.reflect.ReflectedYaml;
+import org.cubeengine.reflect.codec.yaml.ReflectedYaml;
 
 @SuppressWarnings("all")
 public class ${default-class}Config extends ReflectedYaml

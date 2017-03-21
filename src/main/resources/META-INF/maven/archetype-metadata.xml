@@ -8,7 +8,7 @@
         <requiredProperty key="description" />
         <requiredProperty key="default-class" />
         <requiredProperty key="parentVersion" />
-        <requiredProperty key="coreVersion" />
+        <requiredProperty key="libVersion" />
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="true">

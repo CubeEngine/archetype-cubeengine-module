@@ -7,7 +7,7 @@
         <version>7</version>
     </parent>
 
-    <groupId>de.cubeisland.maven.archetypes</groupId>
+    <groupId>org.cubeengine.maven.archetypes</groupId>
     <artifactId>archetype-cubeengine-module</artifactId>
     <version>1.0.5-SNAPSHOT</version>
 
