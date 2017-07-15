@@ -1,17 +1,19 @@
 package ${package};
 
-import de.cubeisland.engine.modularity.asm.marker.ModuleInfo;
-import de.cubeisland.engine.modularity.core.Module;
-import de.cubeisland.engine.modularity.core.marker.Enable;
+import org.cubeengine.processor.Module;
+import org.cubeengine.libcube.CubeEngineModule;
 import org.cubeengine.libcube.service.filesystem.ModuleConfig;
+import org.spongepowered.api.event.game.state.GamePreInitializationEvent;
+import javax.inject.Singleton;
 
-@ModuleInfo(name = "${default-class}", description = "${description}")
-public class ${default-class} extends Module
+@Singleton
+@Module
+public class ${default-class} extends CubeEngineModule
 {
     @ModuleConfig private ${default-class}Config config;
     
-    @Enable
-    public void onEnable()
+    @Listener
+    public void onPreInit(GamePreInitializationEvent event)
     {
         
     }
