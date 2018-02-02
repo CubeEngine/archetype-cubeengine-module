@@ -9,7 +9,7 @@
 
     <groupId>org.cubeengine.maven.archetypes</groupId>
     <artifactId>archetype-cubeengine-module</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.1.0</version>
 
     <name>Archetype - CubeEngine Module</name>
     <description>This archetype generates a new module for the Cube Engine.</description>
@@ -27,7 +27,7 @@
         <url>scm:git:https://github.com/CubeEngine/archetype-cubeengine-module</url>
         <connection>scm:git:https://github.com/CubeEngine/archetype-cubeengine-module</connection>
         <developerConnection>scm:git:https://github.com/CubeEngine/archetype-cubeengine-module</developerConnection>
-        <tag>HEAD</tag>
+        <tag>archetype-cubeengine-module-2.1.0</tag>
     </scm>
 
     <distributionManagement>
