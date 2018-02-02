@@ -9,6 +9,8 @@
         <requiredProperty key="default-class" />
         <requiredProperty key="parentVersion" />
         <requiredProperty key="libVersion" />
+        <requiredProperty key="spongeVersion" />
+        <requiredProperty key="repo" />
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="true">
