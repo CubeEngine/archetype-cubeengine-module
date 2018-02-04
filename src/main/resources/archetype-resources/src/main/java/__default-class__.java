@@ -3,6 +3,7 @@ package ${package};
 import org.cubeengine.processor.Module;
 import org.cubeengine.libcube.CubeEngineModule;
 import org.cubeengine.libcube.service.filesystem.ModuleConfig;
+import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.game.state.GamePreInitializationEvent;
 import javax.inject.Singleton;
 
